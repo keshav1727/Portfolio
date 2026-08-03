@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keshav Bajaj | Full-Stack Developer & Web3 Engineer</title>
+  <meta name="description"
+    content="Portfolio of Keshav Bajaj - Full-Stack Developer building with React, Next.js & TypeScript, with hands-on Web3/blockchain project experience." />
+
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://keshav1727.github.io/portfolio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://keshav1727.github.io/portfolio/" />
+  <meta property="og:title" content="Keshav Bajaj | Full-Stack Developer & Web3 Engineer" />
+  <meta property="og:description"
+    content="Full-Stack Developer building responsive, production-grade web apps with React, Next.js & TypeScript, plus hands-on Web3/blockchain project work." />
+  <meta property="og:image" content="https://keshav1727.github.io/portfolio/assets/img/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keshav Bajaj | Full-Stack Developer & Web3 Engineer" />
+  <meta name="twitter:description"
+    content="Full-Stack Developer building responsive, production-grade web apps with React, Next.js & TypeScript, plus hands-on Web3/blockchain project work." />
+  <meta name="twitter:image" content="https://keshav1727.github.io/portfolio/assets/img/profile.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-a">K</span><span class="loader-s">B</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
+      <p class="loader-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Keshav</span>
+        <span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-resume-btn" onclick="window.open('assets/resume/Keshav_Bajaj_Resume.pdf','_blank')">
+        <i class="fas fa-file-alt"></i> Resume
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div id="particles-js" class="particles-bg"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-greeting reveal-left">
+          <span>Hello, I'm</span>
+        </div>
+        <h1 class="hero-name reveal-left">
+          <span class="name-first">Keshav</span>
+          <span class="name-last">Bajaj</span>
+        </h1>
+        <div class="hero-typewriter reveal-left">
+          <span class="tw-prefix">I build </span>
+          <span id="typewriter" class="tw-text"></span>
+          <span class="tw-cursor">|</span>
+        </div>
+        <p class="hero-bio reveal-left">
+          I craft fast, pixel-perfect web experiences with React &amp; Next.js - and I don't stop at the frontend.
+          From building AI-driven features to exploring Web3 with Solidity smart contracts, I like building things
+          end-to-end and getting my hands dirty with new tech.
+        </p>
+        <div class="hero-cta reveal-left">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+        <div class="hero-socials reveal-left">
+          <a href="https://github.com/keshav1727" target="_blank" class="social-icon-link" title="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/keshav-bajaj-15b4181a8" target="_blank" class="social-icon-link"
+            title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/keshav1727" target="_blank" class="social-icon-link" title="Twitter/X"><i
+              class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual reveal-right">
+        <div class="hero-img-wrapper">
+          <div class="hero-img-glow"></div>
+          <img src="assets/img/profile.jpg" alt="Keshav Bajaj" class="hero-photo" />
+          <div class="hero-img-ring ring-1"></div>
+          <div class="hero-img-ring ring-2"></div>
+        </div>
+        <div class="floating-badge badge-1"><i class="fab fa-react"></i> React</div>
+        <div class="floating-badge badge-5"><i class="fas fa-shapes"></i> Next.js</div>
+        <div class="floating-badge badge-2"><i class="fas fa-code"></i> TypeScript</div>
+        <div class="floating-badge badge-4"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="floating-badge badge-3"><i class="fab fa-python"></i> Python</div>
+        <div class="floating-badge badge-6"><i class="fas fa-file-contract"></i> Solidity</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// 01. about_me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-col reveal-left">
+          <div class="about-img-frame">
+            <img src="assets/img/profile.jpg" alt="Keshav Bajaj" class="about-photo" />
+            <div class="about-img-dots"></div>
+          </div>
+        </div>
+        <div class="about-text-col reveal-right">
+          <h3 class="about-hi">Who Am I?</h3>
+          <p class="about-para">
+            Hey, I'm <strong>Keshav</strong> - a Full-Stack Developer at heart, but really just someone who likes
+            figuring out how things work by building them. That curiosity has taken me from crafting clean UIs
+            in <strong>React</strong> and <strong>Next.js</strong> to writing <strong>Solidity</strong> smart
+            contracts and poking around Web3.
+          </p>
+          <p class="about-para">
+            Whatever the stack, I'm happiest when I own a problem end-to-end and ship something real.
+          </p>
+          <p class="about-para">
+            Outside of code, I've spent a good chunk of my time building communities too - leading student tech
+            chapters, running coding contests, and once organizing a hackathon with 300+ teams from scratch.
+            Turns out the same thing I like about building software - taking something from zero to real - applies
+            just as well to people and events.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+              <p>Months Exp.</p>
+            </div>
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="2">0</span>
+              <p>Companies</p>
+            </div>
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+              <p>Projects Built</p>
+            </div>
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="4">0</span>
+              <p>Freelance Clients</p>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="assets/resume/Keshav_Bajaj_Resume.pdf" download class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="https://t.me/keshavbajaj04" target="_blank" class="btn btn-outline">
+              <i class="fas fa-paper-plane"></i> Say Hello
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// 02. tech_stack</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header">
+            <i class="fas fa-code skill-cat-icon"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-tag tier-1"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-tag tier-1">TypeScript</span>
+            <span class="skill-tag tier-2">Solidity</span>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header">
+            <i class="fas fa-layer-group skill-cat-icon"></i>
+            <h3>Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1"><i class="fab fa-react"></i> React</span>
+            <span class="skill-tag tier-1">Next.js</span>
+            <span class="skill-tag tier-1"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill-tag tier-2">Tailwind CSS</span>
+            <span class="skill-tag tier-2">Web3.js</span>
+            <span class="skill-tag tier-2">Hardhat</span>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header">
+            <i class="fas fa-database skill-cat-icon"></i>
+            <h3>Web3 &amp; Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Supabase</span>
+            <span class="skill-tag tier-1">MetaMask</span>
+            <span class="skill-tag tier-2">IPFS</span>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header">
+            <i class="fas fa-tools skill-cat-icon"></i>
+            <h3>Tools &amp; Technologies</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag tier-1">REST API</span>
+            <span class="skill-tag tier-2">n8n</span>
+            <span class="skill-tag tier-2"><i class="fab fa-figma"></i> Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// 03. experience</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-top">
+              <div class="tc-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="tc-info">
+                <h3 class="tc-role">Software Development Intern</h3>
+                <a href="https://luganodes.com/" target="_blank" class="tc-company">Luganodes</a>
+                <div class="tc-meta">
+                  <span><i class="far fa-calendar-alt"></i> Jul 2025 - May 2026</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                </div>
+              </div>
+            </div>
+            <ul class="tc-bullets">
+              <li>Contributed to building an internal <strong>AI agent</strong> that fetched tweets from selected
+                industry handles and auto-generated on-brand draft posts, streamlining the team's social media content
+                workflow.</li>
+              <li>Contributed to building the <strong>Luganodes company website</strong>, developing responsive frontend
+                interfaces with React and Next.js.</li>
+              <li>Researched <strong>staking mechanics</strong> across multiple chains - validator requirements, epochs,
+                slashing conditions - to support the team's understanding of chain-specific staking requirements.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Next.js</span><span>AI Agents</span><span>TypeScript</span><span>Staking
+                Research</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-top">
+              <div class="tc-icon"><i class="fas fa-coins"></i></div>
+              <div class="tc-info">
+                <h3 class="tc-role">Frontend Developer (Part-Time)</h3>
+                <a href="https://www.getsurf.cash/" target="_blank" class="tc-company">SurfCash</a>
+                <div class="tc-meta">
+                  <span><i class="far fa-calendar-alt"></i> Mar 2026 - May 2026</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                </div>
+              </div>
+            </div>
+            <ul class="tc-bullets">
+              <li>Revamped the SurfCash platform UI, rebuilding core product screens with <strong>React</strong> and
+                <strong>Tailwind CSS</strong> for a cleaner, more responsive user experience.
+              </li>
+              <li>Integrated <strong>Perena</strong>, a Solana-based stablecoin yield and liquidity protocol, enabling
+                users to earn on-chain yield directly within the app.</li>
+              <li>Built the frontend for the <strong>staking page</strong>, wiring it to on-chain deposit,
+                yield-tracking, and withdrawal flows.</li>
+              <li>Developed the frontend for the platform's <strong>token swap and cross-chain bridge</strong> features.
+              </li>
+            </ul>
+            <div class="tc-tags">
+              <span>React</span><span>Tailwind CSS</span><span>Solana</span><span>Web3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-top">
+              <div class="tc-icon"><i class="fas fa-briefcase"></i></div>
+              <div class="tc-info">
+                <h3 class="tc-role">Freelance Full-Stack Developer</h3>
+                <span class="tc-company">Self Employed</span>
+                <div class="tc-meta">
+                  <span><i class="far fa-calendar-alt"></i> 2026 - Present</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                </div>
+              </div>
+            </div>
+            <ul class="tc-bullets">
+              <li>Delivered <strong>3 production full-stack websites</strong> for clients using Next.js, TypeScript, and
+                Supabase, including an ERP portal and a student portal.</li>
+              <li>Built <strong>role-based authentication</strong> so each user type logs in to a personalized view
+                showing only their own details, with Supabase handling authentication and the database.</li>
+              <li>Owned the full project lifecycle: client scoping, UI/UX design, responsive interfaces, backend
+                integration, and deployment.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Full-Stack</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// 04. projects</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card tilt-card reveal-up">
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-seedling"></i></div>
+            <div class="pc-links">
+              <a href="https://github.com/keshav1727" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo (Coming Soon)"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">CropWise</h3>
+          <p class="pc-subtitle">Blockchain Agri DApp</p>
+          <p class="pc-desc">
+            A decentralized app for farmers to register, sell, and trace crops on-chain - ensuring full supply
+            chain transparency. Integrated <strong>QR code traceability</strong> and on-chain data verification
+            connecting farmers, distributors, and consumers.
+          </p>
+          <div class="pc-date"><i class="far fa-calendar"></i> Sep 2025</div>
+          <div class="pc-tags">
+            <span>TypeScript</span><span>Solidity</span><span>Hardhat</span><span>IPFS</span><span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card reveal-up">
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-star-half-stroke"></i></div>
+            <div class="pc-links">
+              <a href="https://github.com/keshav1727" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo (Coming Soon)"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">ReviewMind</h3>
+          <p class="pc-subtitle">AI Review Analysis Agent</p>
+          <p class="pc-desc">
+            An AI agent that reads every review on a hotel or Airbnb listing and surfaces what people actually
+            complained about - what breaks, how often, and whether the host ever fixed it. Built because nobody
+            reads <strong>800 reviews</strong>, and a star rating hides the one detail that actually matters.
+          </p>
+          <div class="pc-date"><i class="far fa-calendar"></i> Jun 2026</div>
+          <div class="pc-tags">
+            <span>Next.js</span><span>TypeScript</span><span>LLM API</span><span>Web Scraping</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card reveal-up">
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="pc-links">
+              <a href="https://github.com/keshav1727" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo (Coming Soon)"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">IdeaMarketplace</h3>
+          <p class="pc-subtitle">Decentralized Idea Exchange</p>
+          <p class="pc-desc">
+            A decentralized platform for buying and selling startup ideas using <strong>Ethereum smart
+              contracts</strong>. Implemented visibility control in-contract: idea titles stay public, full details
+            unlock only after purchase.
+          </p>
+          <div class="pc-date"><i class="far fa-calendar"></i> May 2025</div>
+          <div class="pc-tags">
+            <span>React</span><span>Solidity</span><span>Hardhat</span><span>IPFS</span><span>MetaMask</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card reveal-up">
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-lock"></i></div>
+            <div class="pc-links">
+              <a href="https://github.com/keshav1727" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo (Coming Soon)"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">FreeLedger</h3>
+          <p class="pc-subtitle">Escrow-Based Freelance Payments</p>
+          <p class="pc-desc">
+            A company posts a project, a freelancer gets picked, and payment locks into a <strong>smart contract
+              escrow</strong> the moment it's assigned. Half releases when the work passes an AI check, the other
+            half on the company's sign-off - so the money's already locked in before a single line of code is written.
+          </p>
+          <div class="pc-date"><i class="far fa-calendar"></i> Jul 2026</div>
+          <div class="pc-tags">
+            <span>Solidity</span><span>Hardhat</span><span>Next.js</span><span>AI</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card reveal-up">
+          <div class="pc-glow"></div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fas fa-wallet"></i></div>
+            <div class="pc-links">
+              <a href="https://github.com/keshav1727" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo (Coming Soon)"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">Finance Copilot</h3>
+          <p class="pc-subtitle">AI Statement Analyzer &amp; Chat</p>
+          <p class="pc-desc">
+            Upload any bank, card, UPI, or wallet statement - CSV, PDF, Excel, even a photo - and it categorizes
+            every transaction on its own: food, rent, fuel, subscriptions, salary. Then just ask it questions like
+            "how much did I spend on food last month?" and get answers straight from your actual data, not a guess.
+          </p>
+          <div class="pc-date"><i class="far fa-calendar"></i> Jul 2026</div>
+          <div class="pc-tags">
+            <span>Next.js</span><span>TypeScript</span><span>LLM API</span><span>OCR</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects-more reveal-up">
+        <a href="https://github.com/keshav1727" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// 05. education</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+      </div>
+      <div class="edu-timeline">
+
+        <div class="edu-item reveal-up">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div class="edu-card">
+            <h3>ABES Institute of Technology</h3>
+            <p class="edu-degree">B.Tech - Computer Science (Data Science)</p>
+            <div class="edu-meta">
+              <span><i class="far fa-calendar-alt"></i> Graduated June 2026</span>
+              <span><i class="fas fa-map-marker-alt"></i> Ghaziabad, UP, India</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// 06. achievements</span>
+        <h2 class="section-title">Achievements &amp; <span class="gradient-text">Leadership</span></h2>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="ach-card reveal-up">
+          <div class="ach-icon gold"><i class="fas fa-users"></i></div>
+          <h3>President, ISTE Student Chapter</h3>
+          <p>Led tech events, workshops, and innovation drives at ABESIT as President of the ISTE Student Chapter
+            (2024-25).</p>
+        </div>
+
+        <div class="ach-card reveal-up">
+          <div class="ach-icon silver"><i class="fas fa-code"></i></div>
+          <h3>President, IT Technical Club</h3>
+          <p>Ran coding contests and peer-to-peer learning sessions as President of the IT Technical Club, ABESIT
+            (2024-25).</p>
+        </div>
+
+        <div class="ach-card reveal-up">
+          <div class="ach-icon purple"><i class="fas fa-fire"></i></div>
+          <h3>Lead Organiser, Hacknovate 6.0</h3>
+          <p>Ran a <strong>300+ team hackathon</strong> end-to-end as Lead Organiser (Apr 2025).</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// 07. contact</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-sub">I'm always open to new opportunities, collaborations, and interesting conversations.
+          Let's connect!</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-left">
+          <h3>Let's Talk</h3>
+          <p>Whether you have a project idea, a job opportunity, or just want to say hi - my inbox is always open.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:keshavbajaj1708@gmail.com">keshavbajaj1708@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span>Phone</span>
+                <a href="tel:+918273738353">+91 82737 38353</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span>Location</span>
+                <p>Bangalore, India</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/keshav1727" target="_blank" class="cs-link github" title="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/keshav-bajaj-15b4181a8" target="_blank" class="cs-link linkedin"
+              title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/keshav1727" target="_blank" class="cs-link twitter" title="Twitter/X"><i
+                class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="user_name">Your Name</label>
+                <input type="text" id="user_name" name="user_name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="user_email">Your Email</label>
+                <input type="email" id="user_email" name="user_email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Let's collaborate on..." required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-name">Keshav Bajaj</span>
+          <span class="logo-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-tagline">Full-Stack Developer | React &amp; Next.js | Web3 Engineer</p>
+        <div class="footer-socials">
+          <a href="https://github.com/keshav1727" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/keshav-bajaj-15b4181a8" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/keshav1727" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:keshavbajaj1708@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>(c) 2026 Keshav Bajaj. Designed and built with care.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
