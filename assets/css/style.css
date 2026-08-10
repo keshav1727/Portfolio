@@ -937,6 +937,7 @@ img { max-width: 100%; display: block; }
   transition: var(--transition);
 }
 .pc-links a:hover { color: var(--purple-light); border-color: var(--purple); background: rgba(139,92,246,0.12); }
+.pc-links a.disabled { display: none; }
 
 .pc-title {
   font-family: var(--font-display);
