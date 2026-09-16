@@ -239,11 +239,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* --- LIVE EXPERIENCE DURATIONS ----------------------------- */
+/* Anything dated with data-since / data-from grows on its own as
+   months pass - nothing here needs to be edited by hand.        */
+
+// "2025-07" -> whole months completed since that month started
+function monthsSince(yyyyMm) {
+  const [y, m] = yyyyMm.split("-").map(Number);
+  if (!y || !m) return 0;
+  const now = new Date();
+  const months = (now.getFullYear() - y) * 12 + (now.getMonth() - (m - 1));
+  return Math.max(0, months);
+}
+
+// 3 -> "3 mos", 14 -> "1 yr 2 mos"
+function formatDuration(months) {
+  const total = Math.max(1, months);
+  const yrs = Math.floor(total / 12);
+  const mos = total % 12;
+  const parts = [];
+  if (yrs) parts.push(yrs + (yrs === 1 ? " yr" : " yrs"));
+  if (mos) parts.push(mos + (mos === 1 ? " mo" : " mos"));
+  return parts.join(" ");
+}
+
+// Append a running duration to every ongoing role: "Jun 2026 - Present - 3 mos"
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".tc-date[data-from]").forEach(el => {
+    const months = monthsSince(el.dataset.from);
+    if (months > 0) el.insertAdjacentText("beforeend", " - " + formatDuration(months));
+  });
+
+  const yearEl = document.getElementById("footerYear");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
+
 /* --- ANIMATED COUNTERS ------------------------------------- */
 function animateCounter(el) {
   if (el.dataset.counted) return;
   el.dataset.counted = "1";
-  const target = parseInt(el.dataset.target, 10);
+  // data-since wins over data-target: the number is derived from today's date
+  const target = el.dataset.since ? monthsSince(el.dataset.since) : parseInt(el.dataset.target, 10);
   const duration = 1600;
   const startTime = performance.now();
 

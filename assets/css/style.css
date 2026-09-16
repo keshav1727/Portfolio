@@ -98,15 +98,6 @@ img { max-width: 100%; display: block; }
   margin-bottom: 64px;
 }
 
-.section-tag {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--purple-light);
-  letter-spacing: 0.05em;
-  display: block;
-  margin-bottom: 12px;
-}
-
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.8rem);
@@ -288,6 +279,8 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
@@ -295,8 +288,29 @@ img { max-width: 100%; display: block; }
   transition: var(--transition);
 }
 .nav-logo:hover { opacity: 0.85; }
-.logo-bracket { color: var(--purple-light); }
 .logo-name { background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* KB monogram mark */
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  color: var(--bg-primary);
+  background: var(--gradient-main);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-purple);
+  transition: var(--transition);
+}
+.nav-logo:hover .logo-mark { transform: rotate(-6deg) scale(1.06); }
+.logo-mark-lg { width: 52px; height: 52px; font-size: 1.3rem; border-radius: var(--radius-lg); }
 
 .nav-links {
   display: flex;
@@ -1285,6 +1299,9 @@ img { max-width: 100%; display: block; }
   margin-bottom: 40px;
 }
 .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 800;
